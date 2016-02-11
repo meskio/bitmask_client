@@ -176,7 +176,7 @@ def start_app():
 
     common_flags.STANDALONE = flags.STANDALONE
 
-    logger = get_logger(perform_rollover=True)
+    logger = get_logger()
 
     # NOTE: since we are not using this right now, the code that replaces the
     # stdout needs to be reviewed when we enable this again

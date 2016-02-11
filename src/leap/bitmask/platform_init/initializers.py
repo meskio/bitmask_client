@@ -287,6 +287,7 @@ def WindowsInitializer():
             else:
                 logger.error("Tried to install TAP driver, but the installer "
                              "is not found or not executable")
+    return True
 
 #
 # Darwin initializer functions

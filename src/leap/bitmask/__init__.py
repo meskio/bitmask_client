@@ -79,4 +79,5 @@ except ImportError:
     pass
 
 __short_version__ = first(re.findall('\d+\.\d+\.\d+', __version__))
+__short_version__ = "0.10.0-dirty"
 __full_version__ = __appname__ + '/' + str(__version__)

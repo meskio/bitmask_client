@@ -224,11 +224,13 @@ class ProviderBootstrapper(AbstractBootstrapper):
         else:
             if flags.APP_VERSION_CHECK:
                 # TODO split
-                if not provider.supports_client(min_client_version):
-                    if self._signaler is not None:
-                        self._signaler.signal(
-                            self._signaler.prov_unsupported_client)
-                    raise UnsupportedClientVersionError()
+		from leap.bitmask import __short_version__ as BITMASK_VERSION
+		logger.debug("min client version: %s <-> %s" % (min_client_version, BITMASK_VERSION))
+                #if not provider.supports_client(min_client_version):
+                #    if self._signaler is not None:
+                #        self._signaler.signal(
+                #            self._signaler.prov_unsupported_client)
+                #    raise UnsupportedClientVersionError()
 
             provider_definition, mtime = get_content(res)
 
@@ -252,7 +254,7 @@ class ProviderBootstrapper(AbstractBootstrapper):
                     if self._signaler is not None:
                         self._signaler.signal(
                             self._signaler.prov_unsupported_api)
-                    raise UnsupportedProviderAPI(error)
+                    #raise UnsupportedProviderAPI(error)
 
     def run_provider_select_checks(self, domain, download_if_needed=False):
         """
