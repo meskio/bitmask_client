@@ -18,6 +18,7 @@ Features
 - Experimental support for the Pixelated WebMail.
 - Add email panel to preferences window.
 - Ability to launch detached bitmask.core daemon, and a simplistic bitmask_cli. Not used by the main client yet.
+- Pinned codigosur.email provider.
 
 - `#1234 <https://leap.se/code/issues/1234>`_: Description of the new feature corresponding with issue #1234.
 - New feature without related issue number.
